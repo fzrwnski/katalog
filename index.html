@@ -1,41 +1,168 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Es Krim Jasuke</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Monggo dipilih. Sayang anak, sayang anak.</h1>
-    </header>
-    <main>
-        <div class="catalog">
-            <div class="ice-cream-item">
-                <img src="https://github.com/fzrwnski/katalog/blob/main/ice-cream-balls-bowl.jpg?raw=true" alt="Vanilla Ice Cream">
-                <h2>Vanilla</h2>
-                <p>Price: Rp 30.000</p>
-                <p>Description: Classic vanilla ice cream made with real vanilla beans.</p>
-                <a href="#" class="whatsapp-button" data-flavor="Vanilla">Klik Untuk Pesan</a>
-            </div>
-            <div class="ice-cream-item">
-                <img src="https://github.com/fzrwnski/katalog/blob/main/high-angle-delicious-ice-cream-cookies.jpg?raw=true" alt="Chocolate Ice Cream">
-                <h2>Chocolate</h2>
-                <p>Price: Rp 32.000</p>
-                <p>Description: Rich and creamy chocolate ice cream made with premium cocoa.</p>
-                <a href="#" class="whatsapp-button" data-flavor="Chocolate">Klik Untuk Pesan</a>
-            </div>
-            <div class="ice-cream-item">
-                <img src="https://github.com/fzrwnski/katalog/blob/main/ice-cream-with-fresh-berries.jpg?raw=true" alt="Strawberry Ice Cream">
-                <h2>Strawberry</h2>
-                <p>Price: Rp 32.000</p>
-                <p>Description: Fresh strawberry ice cream made with real strawberries.</p>
-                <a href="#" class="whatsapp-button" data-flavor="Strawberry">Klik Untuk Pesan</a>
-            </div>
-            <!-- Add more ice cream items as needed -->
-        </div>
-    </main>
-    <script src="script.js"></script>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Listing Card with Slider and Dots
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+  <style>
+   .swiper-button-next, .swiper-button-prev {
+            color: white;
+        }
+  </style>
+ </head>
+ <body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+   <div class="relative">
+    <!-- Slider main container -->
+    <div class="swiper-container">
+     <!-- Additional required wrapper -->
+     <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+       <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/b1/6b/23/b16b232b20a680ecdcae102f0d856a52.jpg" width="400"/>
+      </div>
+      <div class="swiper-slide">
+       <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/68/ff/4f/68ff4f39fb463ff31d44892c35dc8174.jpg" width="400"/>
+      </div>
+      <div class="swiper-slide">
+       <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/ee/e6/c3/eee6c36d4983c35d48dccd1769bee7cc.jpg" width="400"/>
+      </div>
+     </div>
+     <!-- If we need pagination -->
+     <div class="swiper-pagination">
+     </div>
+     <!-- If we need navigation buttons -->
+     <div class="swiper-button-prev">
+     </div>
+     <div class="swiper-button-next">
+     </div>
+    </div>
+    <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full">
+     Pilihan tamu
+    </div>
+    <div class="absolute top-2 right-2">
+     <i class="fas fa-heart text-white text-xl">
+     </i>
+    </div>
+   </div>
+   <div class="p-4">
+    <div class="flex justify-between items-center">
+     <div>
+      <h2 class="text-lg font-semibold">
+       Es Krim Vanilla
+      </h2>
+      <p class="text-gray-600">
+       Rasakan keaslian rasa vanilla yang murni dalam setiap sendok. Es krim kami dibuat dengan ekstrak vanilla asli, menghasilkan cita rasa yang kaya dan autentik.
+      </p>
+      <p class="text-italic-600">
+       Vanilla Ice Cream
+      </p>
+     </div>
+     <div class="flex items-center">
+      <i class="fas fa-star text-yellow-500">
+      </i>
+      <span class="ml-1 text-gray-800">
+       4,92
+      </span>
+     </div>
+    </div>
+    <div class="mt-2">
+     <span class="text-lg font-semibold text-gray-800">
+      Rp 30.000
+     </span>
+    
+    </div>
+   </div>
+  </div>
+
+<div class="relative">
+    <!-- Slider main container -->
+    <div class="swiper-container">
+     <!-- Additional required wrapper -->
+     <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+       <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/b1/6b/23/b16b232b20a680ecdcae102f0d856a52.jpg" width="400"/>
+      </div>
+      <div class="swiper-slide">
+       <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/68/ff/4f/68ff4f39fb463ff31d44892c35dc8174.jpg" width="400"/>
+      </div>
+      <div class="swiper-slide">
+       <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/ee/e6/c3/eee6c36d4983c35d48dccd1769bee7cc.jpg" width="400"/>
+      </div>
+     </div>
+     <!-- If we need pagination -->
+     <div class="swiper-pagination">
+     </div>
+     <!-- If we need navigation buttons -->
+     <div class="swiper-button-prev">
+     </div>
+     <div class="swiper-button-next">
+     </div>
+    </div>
+    <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full">
+     Pilihan tamu
+    </div>
+    <div class="absolute top-2 right-2">
+     <i class="fas fa-heart text-white text-xl">
+     </i>
+    </div>
+   </div>
+   <div class="p-4">
+    <div class="flex justify-between items-center">
+     <div>
+      <h2 class="text-lg font-semibold">
+       Es Krim Cokelat
+      </h2>
+      <p class="text-gray-600">
+       Indulgence dalam setiap suapannya. Es krim cokelat kami adalah perpaduan sempurna antara cokelat belgia yang kaya dan susu segar. Rasakan sensasi mewah yang meleleh di lidahmu.
+      </p>
+      <p class="text-italic-600">
+       Chocolate Ice Cream
+      </p>
+     </div>
+     <div class="flex items-center">
+      <i class="fas fa-star text-yellow-500">
+      </i>
+      <span class="ml-1 text-gray-800">
+       4,98
+      </span>
+     </div>
+    </div>
+    <div class="mt-2">
+     <span class="text-lg font-semibold text-gray-800">
+      Rp 34.000
+     </span>
+    
+    </div>
+   </div>
+  </div>
+     
+     
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+  </script>
+  <script>
+   const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+  </script>
+ </body>
 </html>
