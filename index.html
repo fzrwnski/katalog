@@ -1,164 +1,197 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Listing Card with Slider and Dots
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
-  <style>
-   .swiper-button-next, .swiper-button-prev {
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Listing Card with Slider and Dots</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+    <style>
+         <style>
+        .swiper-button-next, .swiper-button-prev {
             color: white;
         }
-  </style>
- </head>
- <body class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-   <div class="relative">
-    <!-- Slider main container -->
-    <div class="swiper-container">
-     <!-- Additional required wrapper -->
-     <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-       <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/b1/6b/23/b16b232b20a680ecdcae102f0d856a52.jpg" width="400"/>
-      </div>
-      <div class="swiper-slide">
-       <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/68/ff/4f/68ff4f39fb463ff31d44892c35dc8174.jpg" width="400"/>
-      </div>
-      <div class="swiper-slide">
-       <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/ee/e6/c3/eee6c36d4983c35d48dccd1769bee7cc.jpg" width="400"/>
-      </div>
-     </div>
-     <!-- If we need pagination -->
-     <div class="swiper-pagination">
-     </div>
-     <!-- If we need navigation buttons -->
-     <div class="swiper-button-prev">
-     </div>
-     <div class="swiper-button-next">
-     </div>
+        .card-container {
+            margin-bottom: 20px; /* Jarak antar kartu */
+            margin-right: 20px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column; /* Mengatur konten dalam kolom */
+            height: 100%; /* Memungkinkan kartu menyesuaikan tinggi */
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Memusatkan card */
+            gap: 16px; /* Jarak antar card */
+            margin-top: 20px; /* Jarak antara header dan cards */
+        }
+        .swiper-container {
+            flex: 1; /* Mengizinkan slider untuk mengambil ruang yang tersedia */
+            height: 400px; /* Tinggi tetap untuk slider */
+        }
+        .swiper-slide img {
+            height: 100%; /* Gambar menyesuaikan tinggi slider */
+            object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+        }
+        
+        body {
+            margin: 0;
+            padding-top: 80px; /* Memberikan ruang untuk header */
+        }
+        header {
+            position: fixed; /* Membuat header tetap di atas */
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white; /* Warna latar belakang header */
+            padding: 20px 0; /* Ruang dalam header */
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan efek kedalaman */
+            z-index: 1000; /* Memastikan header berada di atas elemen lain */
+        }
+      .whatsapp-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+      .heart-red {
+    color: red; /* Mengubah warna hati menjadi merah */
+}
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+   <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800">Selamat Datang di Toko Es Krim Kami!</h1>
+        <h2 class="text-xl text-gray-600">Kembali ke masa kecil dengan setiap gigitan. Es krim klasik kami menghadirkan kenangan manis yang tak terlupakan. Rasa sederhana yang selalu membuat hati senang.</h2>
+    </header>
+    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white card-container">
+        <div class="relative">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/b1/6b/23/b16b232b20a680ecdcae102f0d856a52.jpg" width="400"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/68/ff/4f/68ff4f39fb463ff31d44892c35dc8174.jpg" width="400"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/ee/e6/c3/eee6c36d4983c35d48dccd1769bee7cc.jpg" width="400"/>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full z-10">
+                Favorit
+            </div>
+            <div class="absolute top-2 right-2 z-10">
+                <i class="fas fa-heart text-white text-xl" id="heart-icon"></i>
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-lg font-semibold">Es Krim Vanilla</h2>
+                    <p class="text-gray-600" style="text-align: justify;">Rasakan keaslian rasa vanilla yang murni dalam setiap sendok. Es krim kami dibuat dengan ekstrak vanilla asli, menghasilkan cita rasa yang kaya dan autentik.</p>
+                    <p class="text" style="font-style: italic;">Vanilla Ice Cream</p>
+                </div>
+                
+            </div>
+            <div class="mt-2">
+                <span class="text-lg font-semibold text-gray-800">Rp 30.000</span>
+            </div>
+          <a href="#" class="whatsapp-button" data-flavor="Vanilla">Klik Untuk Pesan</a>
+          
+        </div>
     </div>
-    <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full">
-     Pilihan tamu
-    </div>
-    <div class="absolute top-2 right-2">
-     <i class="fas fa-heart text-white text-xl">
-     </i>
-    </div>
-   </div>
-   <div class="p-4">
-    <div class="flex justify-between items-center">
-     <div>
-      <h2 class="text-lg font-semibold">
-       Es Krim Vanilla
-      </h2>
-      <p class="text-gray-600">
-       Rasakan keaslian rasa vanilla yang murni dalam setiap sendok. Es krim kami dibuat dengan ekstrak vanilla asli, menghasilkan cita rasa yang kaya dan autentik.
-      </p>
-      <p class="text-italic-600">
-       Vanilla Ice Cream
-      </p>
-     </div>
-     <div class="flex items-center">
-      <i class="fas fa-star text-yellow-500">
-      </i>
-      <span class="ml-1 text-gray-800">
-       4,92
-      </span>
-     </div>
-    </div>
-    <div class="mt-2">
-     <span class="text-lg font-semibold text-gray-800">
-      Rp 30.000
-     </span>
-    
-    </div>
-   </div>
-<div class="relative">
-    <!-- Slider main container -->
-<div class="swiper-container">
-     <!-- Additional required wrapper -->
-     <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-       <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/cf/78/76/cf78768a9a82286e8e0933d1a27a5af2.jpg" width="400"/>
-      </div>
-      <div class="swiper-slide">
-       <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/f3/41/d4/f341d485091b685262871875ea681469.jpg" width="400"/>
-      </div>
-      <div class="swiper-slide">
-       <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/f8/be/af/f8beafc2b697458609f24be4eb2fd04b.jpg" width="400"/>
-      </div>
-     </div>
-     <!-- If we need pagination -->
-     <div class="swiper-pagination">
-     </div>
-     <!-- If we need navigation buttons -->
-     <div class="swiper-button-prev">
-     </div>
-     <div class="swiper-button-next">
-     </div>
-    </div>
-    <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full">
-     Pilihan tamu
-    </div>
-    <div class="absolute top-2 right-2">
-     <i class="fas fa-heart text-white text-xl">
-     </i>
-    </div>
-   </div>
-   <div class="p-4">
-    <div class="flex justify-between items-center">
-     <div>
-      <h2 class="text-lg font-semibold">
-       Es Krim Cokelat
-      </h2>
-      <p class="text-gray-600">
-       Indulgence dalam setiap suapannya. Es krim cokelat kami adalah perpaduan sempurna antara cokelat belgia yang kaya dan susu segar. Rasakan sensasi mewah yang meleleh di lidahmu.
-      </p>
-      <p class="text-italic-600">
-       Chocolate Ice Cream
-      </p>
-     </div>
-     <div class="flex items-center">
-      <i class="fas fa-star text-yellow-500">
-      </i>
-      <span class="ml-1 text-gray-800">
-       4,98
-      </span>
-     </div>
-    </div>
-    <div class="mt-2">
-     <span class="text-lg font-semibold text-gray-800">
-      Rp 34.000
-     </span>
-    
-    </div>
-   </div>
-     
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
-  </script>
-  <script>
-   const swiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            loop: true,
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
+    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white card-container">
+        <div class="relative">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/cf/78/76/cf78768a9a82286e8e0933d1a27a5af2.jpg" width="400"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/f3/41/d4/f341d485091b685262871875ea681469.jpg" width="400"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/f8/be/af/f8beafc2b697458609f24be4eb2fd04b.jpg" width="400"/>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full z-10">
+                Favorit
+            </div>
+            <div class="absolute top-2 right-2 z-10">
+                <i class="fas fa-heart text-white text-xl" id="heart-icon"></i>
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-lg font-semibold">Es Krim Cokelat</h2>
+                    <p class="text-gray-600" style="text-align: justify;">Indulgence dalam setiap suapannya. Es krim cokelat kami adalah perpaduan sempurna antara cokelat belgia yang kaya dan susu segar. Rasakan sensasi mewah yang meleleh di lidahmu.</p>
+                    <p class="text" style="font-style: italic;">Chocolate Ice Cream</p>
+                </div>
+                
+            </div>
+            <div class="mt-2">
+                <span class="text-lg font-semibold text-gray-800">Rp 34.000</span>
+            </div>
+          <a href="#" class="whatsapp-button" data-flavor="Vanilla">Klik Untuk Pesan</a>
+        </div>
+    </div>
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swipers = document.querySelectorAll('.swiper-container');
+        swipers.forEach(swiper => {
+            new Swiper(swiper, {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
         });
-  </script>
- </body>
+document.querySelectorAll('.whatsapp-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const flavor = this.getAttribute('data-flavor');
+        const message = `I want a ${flavor}. Today is ${new Date().toLocaleDateString()}`;
+        const whatsappUrl = `https://wa.me/+62895424461420?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    });
+});
+      const heartIcon = document.getElementById('heart-icon');
+
+        heartIcon.addEventListener('click', function() {
+            heartIcon.classList.toggle('heart-red'); // Menambahkan atau menghapus kelas heart-red
+        });
+    </script>
+</body>
 </html>
