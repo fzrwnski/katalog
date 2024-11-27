@@ -14,9 +14,10 @@
         .card-container {
             margin-bottom: 20px; /* Jarak antar kartu */
             margin-top: 60px;
+            margin-right: 20px;
             display: flex;
             flex-direction: column; /* Mengatur konten dalam kolom */
-            height: 700px; /* Memungkinkan kartu menyesuaikan tinggi */
+            height: flex; /* Memungkinkan kartu menyesuaikan tinggi */
         }
         .cards {
             display: flex;
@@ -85,7 +86,7 @@
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
    <header class="text-center mb-8">
         <h1 class="text-3xl font-bold text-gray-800">Selamat Datang di Toko Es Krim Kami!</h1>
-        <h2 class="text-xl text-gray-600">Kembali ke masa kecil dengan setiap gigitan. Es krim klasik kami menghadirkan kenangan manis yang tak terlupakan. Rasa sederhana yang selalu membuat hati senang.</h2>
+        <h2 class="text-xl text-gray-600">Kembali ke masa kecil di setiap gigitan</h2>
     </header>
     <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white card-container">
         <div class="relative">
@@ -114,8 +115,8 @@
                 Favorit
             </div>
             <div class="absolute top-2 right-2 z-10">
-                <i class="fas fa-heart text-white text-xl" id="heart-icon"></i>
-            </div>
+    <i class="fas fa-heart text-white text-xl" id="heart-icon-vanilla"></i>
+</div>
         </div>
         <div class="p-4">
             <div class="flex justify-between items-center">
@@ -161,8 +162,8 @@
                 Favorit
             </div>
             <div class="absolute top-2 right-2 z-10">
-                <i class="fas fa-heart text-white text-xl" id="heart-icon"></i>
-            </div>
+    <i class="fas fa-heart text-white text-xl" id="heart-icon-chocolate"></i>
+</div>
         </div>
         <div class="p-4">
             <div class="flex justify-between items-center">
@@ -176,10 +177,55 @@
             <div class="mt-2">
                 <span class="text-lg font-semibold text-gray-800">Rp 34.000</span>
             </div>
-          <a href="#" class="whatsapp-button" data-flavor="Vanilla">Klik Untuk Pesan</a>
+          <a href="#" class="whatsapp-button" data-flavor="Chocolate">Klik Untuk Pesan</a>
         </div>
     </div>
-
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white card-container">
+<div class="relative">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img alt="Image 1" class="w-full" height="300" src="https://i.pinimg.com/474x/2f/39/3e/2f393e1fbbfa247a533d411a3254a01c.jpg" width="400"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="Image 2" class="w-full" height="300" src="https://i.pinimg.com/474x/5b/53/77/5b53779e1e1d70554ab891f6947feb39.jpg" width="400"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img alt="Image 3" class="w-full" height="300" src="https://i.pinimg.com/474x/0b/89/c5/0b89c5d7bdb99316876fcfd3284c78ab.jpg" width="400"/>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="absolute top-2 left-2 bg-white text-gray-800 text-sm font-semibold px-2 py-1 rounded-full z-10">
+                Favorit
+            </div>
+            <div class="absolute top-2 right-2 z-10">
+    <i class="fas fa-heart text-white text-xl" id="heart-icon-strawberry"></i>
+</div>
+        </div>
+        <div class="p-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-lg font-semibold">Es Krim Strawberry</h2>
+                    <p class="text-gray-600" style="text-align: justify;">Nikmati sensasi segar buah stroberi dalam setiap suapan es krim kami. Stroberi segar pilihannya menawarkan rasa manis alami dan sedikit asam yang menyegarkan dan memanjakan lidah Anda.</p>
+                    <p class="text" style="font-style: italic;">Strawberry Ice Cream</p>
+                </div>
+                
+            </div>
+            <div class="mt-2">
+                <span class="text-lg font-semibold text-gray-800">Rp 32.000</span>
+            </div>
+          <a href="#" class="whatsapp-button" data-flavor="Strawberry">Klik Untuk Pesan</a>
+        </div>
+    </div>
+  
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const swipers = document.querySelectorAll('.swiper-container');
@@ -205,11 +251,21 @@ document.querySelectorAll('.whatsapp-button').forEach(button => {
         window.open(whatsappUrl, '_blank');
     });
 });
-      const heartIcon = document.getElementById('heart-icon');
+      // Menambahkan event listener untuk ikon hati vanilla
+const heartIconVanilla = document.getElementById('heart-icon-vanilla');
+heartIconVanilla.addEventListener('click', function() {
+    heartIconVanilla.classList.toggle('heart-red'); // Menambahkan atau menghapus kelas heart-red
+});
 
-        heartIcon.addEventListener('click', function() {
-            heartIcon.classList.toggle('heart-red'); // Menambahkan atau menghapus kelas heart-red
-        });
+// Menambahkan event listener untuk ikon hati cokelat
+const heartIconChocolate = document.getElementById('heart-icon-chocolate');
+heartIconChocolate.addEventListener('click', function() {
+    heartIconChocolate.classList.toggle('heart-red'); // Menambahkan atau menghapus kelas heart-red
+});
+      const heartIconStrawberry = document.getElementById('heart-icon-strawberry');
+heartIconStrawberry.addEventListener('click', function() {
+    heartIconStrawberry.classList.toggle('heart-red'); // Menambahkan atau menghapus kelas heart-red
+});
     </script>
 </body>
 </html>
