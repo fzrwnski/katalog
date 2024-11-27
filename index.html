@@ -17,7 +17,7 @@
             margin-top: 50px;
             display: flex;
             flex-direction: column; /* Mengatur konten dalam kolom */
-            height: 100%; /* Memungkinkan kartu menyesuaikan tinggi */
+            height: 700px; /* Memungkinkan kartu menyesuaikan tinggi */
         }
         .cards {
             display: flex;
@@ -61,6 +61,25 @@
 }
       .heart-red {
     color: red; /* Mengubah warna hati menjadi merah */
+}
+        /* CSS untuk container utama */
+.container {
+    display: flex;
+    flex-direction: row; /* Baris horizontal untuk desktop */
+    flex-wrap: wrap; /* Membungkus item jika tidak muat */
+}
+
+/* CSS untuk setiap item */
+.item {
+    flex: 1 1 300px; /* Membuat setiap item memiliki lebar minimal 300px */
+    margin: 10px; /* Menambahkan margin antar item */
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Baris vertikal untuk mobile */
+    }
 }
     </style>
 </head>
